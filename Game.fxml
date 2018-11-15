@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mancalaworking.GameController">
+   <top>
+      <GridPane prefHeight="62.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="131.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="138.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="133.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="62.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+            <Label fx:id="player1name" text="Player 1" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label fx:id="player2name" text="Player 2" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </top>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#handleLeaveGameButton" text="Leave Game" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <center>
+      <GridPane prefHeight="238.0" prefWidth="281.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="94.0" minHeight="7.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Ellipse fx:id="hole12" onMouseClicked="#hole12_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+            </Ellipse>
+            <Ellipse fx:id="hole11" onMouseClicked="#hole11_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole0" onMouseClicked="#hole0_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole1" onMouseClicked="#hole1_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole10" onMouseClicked="#hole10_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole9" onMouseClicked="#hole9_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole8" onMouseClicked="#hole8_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole7" onMouseClicked="#hole7_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole2" onMouseClicked="#hole2_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole3" onMouseClicked="#hole3_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole4" onMouseClicked="#hole4_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse fx:id="hole5" onMouseClicked="#hole5_click" radiusX="26.0" radiusY="62.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Text fx:id="h11" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text fx:id="h12" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text fx:id="h10" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text fx:id="h9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text fx:id="h8" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text fx:id="h7" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text fx:id="h0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Text fx:id="h1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Text fx:id="h2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Text fx:id="h3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Text fx:id="h4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Text fx:id="h5" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Text fx:id="gametext" strokeType="OUTSIDE" strokeWidth="0.0" text="####" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </center>
+   <left>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Ellipse fx:id="hole13" onMouseClicked="#hole13_click" radiusX="42.0" radiusY="147.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Text fx:id="h13" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </left>
+   <right>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Ellipse fx:id="hole6" onMouseClicked="#hole6_click" radiusX="42.0" radiusY="147.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" radius="11.5175" spread="0.27" width="27.07" />
+               </effect>
+               <fill>
+                  <RadialGradient centerX="0.48314606741573035" centerY="0.5" focusAngle="99.46" focusDistance="-0.11904761904761907" radius="0.5476190476190477">
+                     <stops>
+                        <Stop color="#ffffff66" />
+                        <Stop color="#eb7e05f0" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Text fx:id="h6" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </right>
+</BorderPane>

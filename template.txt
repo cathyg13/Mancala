@@ -1,0 +1,9 @@
+Username
+user image
+First Name
+Last Name
+dateAndTime
+favourite players
+number of wins
+number of games
+win percentage

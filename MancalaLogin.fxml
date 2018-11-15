@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mancalaworking.LoginPageController">
+    
+    <padding><Insets bottom="10" left="25" right="25" top="25" />
+    </padding>
+   <children>
+       
+       
+       <Text id="welcometext" text="Welcome" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+       
+       <Label text="Select User" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+       
+       <Label text="Password" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+       <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+       
+       
+       <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+       
+       <Text fx:id="buttonactiontext" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+          <Button onAction="#handleSubmitButtonAction" text="Sign In" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <ComboBox onAction="#selectUserAction" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   </children>
+    
+            <stylesheets>
+                <URL value="@FXML_CSS.css" />
+            </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+        
+</GridPane>

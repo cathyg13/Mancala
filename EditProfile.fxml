@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mancalaworking.EditProfileController">
+    <stylesheets>
+        <URL value="@FXML_CSS.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="115.0" layoutY="71.0" prefHeight="258.0" prefWidth="373.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="username" GridPane.columnIndex="1" />
+            <TextField fx:id="firstname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="surname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CheckBox fx:id="not_human" mnemonicParsing="false" text="Not Human" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" text="Username" GridPane.halignment="RIGHT">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label text="First Name" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label text="Surname" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label text="Select Profile Image" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="oldpassword" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Old Password" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Text fx:id="buttonactiontext" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Label text="New Password" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Label layoutX="263.0" layoutY="44.0" text="Edit Profile" />
+      <ImageView fitHeight="97.0" fitWidth="116.0" layoutX="26.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="createUserButton" layoutX="433.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleChangesButtonAction" text="Make Changes" />
+      <Button fx:id="user_cancel" layoutX="44.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" text="Cancel" />
+   </children>
+</AnchorPane>

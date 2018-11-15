@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@FXML_CSS.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mancalaworking.LeaderboardPageController">
+  <tabs>
+    <Tab text="WinPercentage">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="winpercentagetable" layoutX="14.0" layoutY="84.0" prefHeight="200.0" prefWidth="234.0" AnchorPane.leftAnchor="50.0">
+                    <columns>
+                      <TableColumn fx:id="winpercentageusername" prefWidth="116.0" text="Username" />
+                      <TableColumn fx:id="winpercentage" prefWidth="117.0" text="WinPercentage" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="199.0" layoutY="14.0" text="Leaderboard : WinPercentage" />
+                  <ComboBox fx:id="opponentlist" layoutX="387.0" layoutY="121.0" prefWidth="150.0" AnchorPane.bottomAnchor="221.0" AnchorPane.leftAnchor="387.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="121.0" />
+                  <Button fx:id="makefavorite" layoutX="407.0" layoutY="171.0" mnemonicParsing="false" onAction="#handlefavoriteselect" text="Make Favorite" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="171.0" />
+                  <Button layoutX="493.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleMenuButton" text="Main Menu" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="TotalWins">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="totalwinstable" layoutX="62.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0">
+                    <columns>
+                      <TableColumn fx:id="totalwinsusername" prefWidth="118.0" text="Username" />
+                      <TableColumn fx:id="totalwins" prefWidth="81.0" text="Wins" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="215.0" layoutY="14.0" text="Leaderboard : Total Wins" />
+                  <Button layoutX="407.0" layoutY="171.0" mnemonicParsing="false" text="Make Favorite" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="171.0" />
+                  <ComboBox layoutX="391.0" layoutY="125.0" prefWidth="150.0" AnchorPane.bottomAnchor="221.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="121.0" />
+                  <Button layoutX="493.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleMenuButton" text="Main Menu" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
